@@ -7,6 +7,11 @@ import reactor.core.publisher.Mono;
 @RestController
 public class HelloController {
 
+    @GetMapping("/")
+    public Mono<String> home() {
+        return Mono.just("{ \"message\": \"Home\" }");
+    }
+
     @GetMapping("hello")
     public Mono<String> hello() {
         return Mono.just("{ \"message\": \"Hello\" }");
