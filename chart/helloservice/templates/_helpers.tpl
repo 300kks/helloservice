@@ -47,6 +47,8 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "helloservice.selectorLabels" -}}
+app: helloservice
+version: v1
 app.kubernetes.io/name: {{ include "helloservice.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
