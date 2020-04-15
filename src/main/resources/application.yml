@@ -11,6 +11,10 @@ spring:
     username: postgres
     password: postgres
 
+flyway.url: jdbc:postgresql://localhost:5432/300kks?currentSchema=helloservice
+flyway.user: postgres
+flyway.password: postgres
+
 opentracing:
   jaeger:
     http-sender:
