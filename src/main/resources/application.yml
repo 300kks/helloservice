@@ -6,6 +6,10 @@ spring:
       resourceserver:
         jwt:
           public-key-location: classpath:public.cert
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5432/300kks?schema=helloservice
+    username: postgres
+    password: postgres
 
 opentracing:
   jaeger:
