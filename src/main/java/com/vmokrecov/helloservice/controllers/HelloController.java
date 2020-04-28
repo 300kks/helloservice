@@ -2,6 +2,7 @@ package com.vmokrecov.helloservice.controllers;
 
 import com.vmokrecov.helloservice.dto.MessagesDTO;
 import com.vmokrecov.helloservice.services.MessagesService;
+import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @AllArgsConstructor
+@Api(tags = "HelloController admin", description = "HelloController description")
 public class HelloController {
 
     private final MessagesService service;
