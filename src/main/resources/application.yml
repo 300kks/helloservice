@@ -10,11 +10,10 @@ spring:
     url: r2dbc:pool:postgresql://localhost:5432/300kks?schema=helloservice
     username: postgres
     password: postgres
-
-flyway:
-  url: jdbc:postgresql://localhost:5432/300kks?currentSchema=helloservice
-  user: postgres
-  password: postgres
+  flyway:
+    url: jdbc:postgresql://localhost:5432/300kks?currentSchema=helloservice
+    user: postgres
+    password: postgres
 
 opentracing:
   jaeger:
